@@ -26,9 +26,9 @@ Tablica tim
 - 'esport': Esport u kojem se natječu
 - 'brojTrofeja': Broj osvojenih trofeja
 - 'drzava': Država iz koje tim dolazi
-- 'pobjede2023': Broj pobjeda u sezoni 2023
+- 'pobjede2023': Broj pobjeda u godini 2023
 - 'porazi2023': Broj poraza u godini 2023
-- 'igraci2023': Broj igrača u godini 2023
+- 'igraci2023': Igrači u godini 2023
 - 'regija': Regija u kojoj se tim natječe
 - 'ukupnaZarada': Ukupna zarada tima u USD
 
