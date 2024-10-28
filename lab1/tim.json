@@ -1,0 +1,15 @@
+                                                                                                           json_agg                                                                                                           
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ [{"tim_id":1,"naziv":"T1","skracenica":"T1","godina_osnutka":2003,"esport":"League of Legends","broj_trofeja":10,"drzava":"Južna Koreja","pobjede2023":96,"porazi2023":56,"regija":"LCK","ukupna_zarada":9418521.00},       +
+  {"tim_id":2,"naziv":"JD Gaming","skracenica":"JDG","godina_osnutka":2017,"esport":"League of Legends","broj_trofeja":5,"drzava":"Kina","pobjede2023":95,"porazi2023":30,"regija":"LPL","ukupna_zarada":2341588.00},        +
+  {"tim_id":3,"naziv":"Gen.G","skracenica":"GEN","godina_osnutka":2017,"esport":"League of Legends","broj_trofeja":3,"drzava":"Južna Koreja","pobjede2023":95,"porazi2023":38,"regija":"LCK","ukupna_zarada":1943449.00},    +
+  {"tim_id":4,"naziv":"Bilibili Gaming","skracenica":"BLG","godina_osnutka":2017,"esport":"League of Legends","broj_trofeja":2,"drzava":"Kina","pobjede2023":100,"porazi2023":60,"regija":"LPL","ukupna_zarada":1442683.00}, +
+  {"tim_id":5,"naziv":"G2 Esports","skracenica":"G2","godina_osnutka":2014,"esport":"League of Legends","broj_trofeja":9,"drzava":"Europa","pobjede2023":68,"porazi2023":32,"regija":"LEC","ukupna_zarada":3603017.00},      +
+  {"tim_id":6,"naziv":"Fnatic","skracenica":"FNC","godina_osnutka":2004,"esport":"League of Legends","broj_trofeja":7,"drzava":"Europa","pobjede2023":37,"porazi2023":38,"regija":"LEC","ukupna_zarada":3480526.00},         +
+  {"tim_id":7,"naziv":"FlyQuest","skracenica":"FLY","godina_osnutka":2017,"esport":"League of Legends","broj_trofeja":1,"drzava":"SAD","pobjede2023":25,"porazi2023":23,"regija":"LCS","ukupna_zarada":497450.00},           +
+  {"tim_id":8,"naziv":"Cloud9","skracenica":"C9","godina_osnutka":2013,"esport":"League of Legends","broj_trofeja":6,"drzava":"SAD","pobjede2023":50,"porazi2023":25,"regija":"LCS","ukupna_zarada":2662341.00},             +
+  {"tim_id":9,"naziv":"Sentinels","skracenica":"SEN","godina_osnutka":2020,"esport":"Valorant","broj_trofeja":3,"drzava":"SAD","pobjede2023":37,"porazi2023":30,"regija":"NA","ukupna_zarada":2500000.00},                   +
+  {"tim_id":10,"naziv":"Moist Esports","skracenica":"MOIST","godina_osnutka":2021,"esport":"Rocket League","broj_trofeja":2,"drzava":"SAD","pobjede2023":16,"porazi2023":14,"regija":"EU","ukupna_zarada":440880.00},        +
+  {"tim_id":11,"naziv":"Natus Vincere","skracenica":"NaVi","godina_osnutka":2009,"esport":"CS:GO","broj_trofeja":11,"drzava":"Ukrajina","pobjede2023":74,"porazi2023":56,"regija":"EU","ukupna_zarada":9483067.00}]
+(1 row)
+

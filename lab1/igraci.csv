@@ -1,0 +1,54 @@
+igrac_id,puno_ime,nickname,pozicija,godina_prikljucenja,tim_id
+1,Lee Sang-hyeok,Faker,Mid,2013,1
+2,Ryu Min-seok,Zeus,Top,2021,1
+3,Moon Hyeon-jun,Oner,Jungle,2021,1
+4,Lee Min-hyung,Gumayusi,ADC,2020,1
+5,Ryu Min-seong,Keria,Support,2020,1
+6,Seo Jin-hyeok,Kanavi,Jungle,2020,2
+7,Zhuo Ding,Knight,Mid,2023,2
+8,Park Jae-hyuk,Ruler,ADC,2023,2
+9,Bai Jiahao,369,Top,2021,2
+10,Lou Yunfeng,Missing,Support,2023,2
+11,Han Wang-ho,Peanut,Jungle,2020,3
+12,Jeong Ji-hoon,Chovy,Mid,2021,3
+13,Park Joon-young,Doran,Top,2021,3
+14,Kim Tae-min,Peyz,ADC,2023,3
+15,Yoo Min-seok,Delight,Support,2023,3
+16,Chen Ze-Bin,Bin,Top,2023,4
+17,Peng Zhen-Ming,Xun,Jungle,2021,4
+18,Zeng Qi,Yagao,Mid,2021,4
+19,Elk,Elk,ADC,2023,4
+20,Liu Shi-Yu,On,Support,2021,4
+21,Sergen Çelik,BrokenBlade,Top,2021,5
+22,Martin Hansen,Yike,Jungle,2023,5
+23,Rasmus Winther,Caps,Mid,2018,5
+24,Steven Liv,Hans sama,ADC,2023,5
+25,Mihael Mehle,Mikyx,Support,2023,5
+26,Óscar Muñoz,Oscarinin,Top,2023,6
+27,Iván Martín,Razork,Jungle,2022,6
+28,Marek Brázda,Humanoid,Mid,2022,6
+29,Carl Martin Erik Larsson,Rekkles,ADC,2015,6
+30,Adrian Trybus,Trymbi,Support,2023,6
+31,Jeong Ho-bin,Impact,Top,2023,7
+32,Lucas Tao Kilmer Larsen,Santorin,Jungle,2023,7
+33,Loïc Dubois,Toucouille,Mid,2022,7
+34,Bae Ho-min,Prince,ADC,2023,7
+35,Kim Dong-wook,Winsome,Support,2023,7
+36,Ibrahim Allami,Fudge,Top,2021,8
+37,Robert Huang,Blaber,Jungle,2020,8
+38,Jiang Tao,Diplex,Mid,2023,8
+39,Kim Min-cheol,Berserker,ADC,2023,8
+40,Jesper Svenningsen,Zven,Support,2022,8
+41,Hunter Mims,SicK,Flex,2020,9
+42,Jared Gitlin,zombs,Controller,2020,9
+43,Shahzeeb Khan,ShahZaM,In-game Leader,2020,9
+44,Tyson Ngo,TenZ,Duelist,2021,9
+45,Michael Grzesiek,shroud,Flex,2022,9
+46,Joris Robben,Joyo,Striker,2022,10
+47,Finlay Ferguson,Rise,Midfielder,2022,10
+48,Axel Lopez,Astro,Defender,2023,10
+49,Oleksandr Kostyliev,s1mple,AWPer,2016,11
+50,Denis Sharipov,electroNic,Rifler,2017,11
+51,Ilya Zalutskiy,Perfecto,Support,2020,11
+52,Andrii Kukharskyi,npl,Entry Fragger,2023,11
+53,Valerii Vakhovskyi,b1t,Rifler,2021,11

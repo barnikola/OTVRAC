@@ -1,0 +1,57 @@
+                                                                json_agg                                                                 
+-----------------------------------------------------------------------------------------------------------------------------------------
+ [{"igrac_id":1,"puno_ime":"Lee Sang-hyeok","nickname":"Faker","pozicija":"Mid","godina_prikljucenja":2013,"tim_id":1},                 +
+  {"igrac_id":2,"puno_ime":"Ryu Min-seok","nickname":"Zeus","pozicija":"Top","godina_prikljucenja":2021,"tim_id":1},                    +
+  {"igrac_id":3,"puno_ime":"Moon Hyeon-jun","nickname":"Oner","pozicija":"Jungle","godina_prikljucenja":2021,"tim_id":1},               +
+  {"igrac_id":4,"puno_ime":"Lee Min-hyung","nickname":"Gumayusi","pozicija":"ADC","godina_prikljucenja":2020,"tim_id":1},               +
+  {"igrac_id":5,"puno_ime":"Ryu Min-seong","nickname":"Keria","pozicija":"Support","godina_prikljucenja":2020,"tim_id":1},              +
+  {"igrac_id":6,"puno_ime":"Seo Jin-hyeok","nickname":"Kanavi","pozicija":"Jungle","godina_prikljucenja":2020,"tim_id":2},              +
+  {"igrac_id":7,"puno_ime":"Zhuo Ding","nickname":"Knight","pozicija":"Mid","godina_prikljucenja":2023,"tim_id":2},                     +
+  {"igrac_id":8,"puno_ime":"Park Jae-hyuk","nickname":"Ruler","pozicija":"ADC","godina_prikljucenja":2023,"tim_id":2},                  +
+  {"igrac_id":9,"puno_ime":"Bai Jiahao","nickname":"369","pozicija":"Top","godina_prikljucenja":2021,"tim_id":2},                       +
+  {"igrac_id":10,"puno_ime":"Lou Yunfeng","nickname":"Missing","pozicija":"Support","godina_prikljucenja":2023,"tim_id":2},             +
+  {"igrac_id":11,"puno_ime":"Han Wang-ho","nickname":"Peanut","pozicija":"Jungle","godina_prikljucenja":2020,"tim_id":3},               +
+  {"igrac_id":12,"puno_ime":"Jeong Ji-hoon","nickname":"Chovy","pozicija":"Mid","godina_prikljucenja":2021,"tim_id":3},                 +
+  {"igrac_id":13,"puno_ime":"Park Joon-young","nickname":"Doran","pozicija":"Top","godina_prikljucenja":2021,"tim_id":3},               +
+  {"igrac_id":14,"puno_ime":"Kim Tae-min","nickname":"Peyz","pozicija":"ADC","godina_prikljucenja":2023,"tim_id":3},                    +
+  {"igrac_id":15,"puno_ime":"Yoo Min-seok","nickname":"Delight","pozicija":"Support","godina_prikljucenja":2023,"tim_id":3},            +
+  {"igrac_id":16,"puno_ime":"Chen Ze-Bin","nickname":"Bin","pozicija":"Top","godina_prikljucenja":2023,"tim_id":4},                     +
+  {"igrac_id":17,"puno_ime":"Peng Zhen-Ming","nickname":"Xun","pozicija":"Jungle","godina_prikljucenja":2021,"tim_id":4},               +
+  {"igrac_id":18,"puno_ime":"Zeng Qi","nickname":"Yagao","pozicija":"Mid","godina_prikljucenja":2021,"tim_id":4},                       +
+  {"igrac_id":19,"puno_ime":"Elk","nickname":"Elk","pozicija":"ADC","godina_prikljucenja":2023,"tim_id":4},                             +
+  {"igrac_id":20,"puno_ime":"Liu Shi-Yu","nickname":"On","pozicija":"Support","godina_prikljucenja":2021,"tim_id":4},                   +
+  {"igrac_id":21,"puno_ime":"Sergen Çelik","nickname":"BrokenBlade","pozicija":"Top","godina_prikljucenja":2021,"tim_id":5},            +
+  {"igrac_id":22,"puno_ime":"Martin Hansen","nickname":"Yike","pozicija":"Jungle","godina_prikljucenja":2023,"tim_id":5},               +
+  {"igrac_id":23,"puno_ime":"Rasmus Winther","nickname":"Caps","pozicija":"Mid","godina_prikljucenja":2018,"tim_id":5},                 +
+  {"igrac_id":24,"puno_ime":"Steven Liv","nickname":"Hans sama","pozicija":"ADC","godina_prikljucenja":2023,"tim_id":5},                +
+  {"igrac_id":25,"puno_ime":"Mihael Mehle","nickname":"Mikyx","pozicija":"Support","godina_prikljucenja":2023,"tim_id":5},              +
+  {"igrac_id":26,"puno_ime":"Óscar Muñoz","nickname":"Oscarinin","pozicija":"Top","godina_prikljucenja":2023,"tim_id":6},               +
+  {"igrac_id":27,"puno_ime":"Iván Martín","nickname":"Razork","pozicija":"Jungle","godina_prikljucenja":2022,"tim_id":6},               +
+  {"igrac_id":28,"puno_ime":"Marek Brázda","nickname":"Humanoid","pozicija":"Mid","godina_prikljucenja":2022,"tim_id":6},               +
+  {"igrac_id":29,"puno_ime":"Carl Martin Erik Larsson","nickname":"Rekkles","pozicija":"ADC","godina_prikljucenja":2015,"tim_id":6},    +
+  {"igrac_id":30,"puno_ime":"Adrian Trybus","nickname":"Trymbi","pozicija":"Support","godina_prikljucenja":2023,"tim_id":6},            +
+  {"igrac_id":31,"puno_ime":"Jeong Ho-bin","nickname":"Impact","pozicija":"Top","godina_prikljucenja":2023,"tim_id":7},                 +
+  {"igrac_id":32,"puno_ime":"Lucas Tao Kilmer Larsen","nickname":"Santorin","pozicija":"Jungle","godina_prikljucenja":2023,"tim_id":7}, +
+  {"igrac_id":33,"puno_ime":"Loïc Dubois","nickname":"Toucouille","pozicija":"Mid","godina_prikljucenja":2022,"tim_id":7},              +
+  {"igrac_id":34,"puno_ime":"Bae Ho-min","nickname":"Prince","pozicija":"ADC","godina_prikljucenja":2023,"tim_id":7},                   +
+  {"igrac_id":35,"puno_ime":"Kim Dong-wook","nickname":"Winsome","pozicija":"Support","godina_prikljucenja":2023,"tim_id":7},           +
+  {"igrac_id":36,"puno_ime":"Ibrahim Allami","nickname":"Fudge","pozicija":"Top","godina_prikljucenja":2021,"tim_id":8},                +
+  {"igrac_id":37,"puno_ime":"Robert Huang","nickname":"Blaber","pozicija":"Jungle","godina_prikljucenja":2020,"tim_id":8},              +
+  {"igrac_id":38,"puno_ime":"Jiang Tao","nickname":"Diplex","pozicija":"Mid","godina_prikljucenja":2023,"tim_id":8},                    +
+  {"igrac_id":39,"puno_ime":"Kim Min-cheol","nickname":"Berserker","pozicija":"ADC","godina_prikljucenja":2023,"tim_id":8},             +
+  {"igrac_id":40,"puno_ime":"Jesper Svenningsen","nickname":"Zven","pozicija":"Support","godina_prikljucenja":2022,"tim_id":8},         +
+  {"igrac_id":41,"puno_ime":"Hunter Mims","nickname":"SicK","pozicija":"Flex","godina_prikljucenja":2020,"tim_id":9},                   +
+  {"igrac_id":42,"puno_ime":"Jared Gitlin","nickname":"zombs","pozicija":"Controller","godina_prikljucenja":2020,"tim_id":9},           +
+  {"igrac_id":43,"puno_ime":"Shahzeeb Khan","nickname":"ShahZaM","pozicija":"In-game Leader","godina_prikljucenja":2020,"tim_id":9},    +
+  {"igrac_id":44,"puno_ime":"Tyson Ngo","nickname":"TenZ","pozicija":"Duelist","godina_prikljucenja":2021,"tim_id":9},                  +
+  {"igrac_id":45,"puno_ime":"Michael Grzesiek","nickname":"shroud","pozicija":"Flex","godina_prikljucenja":2022,"tim_id":9},            +
+  {"igrac_id":46,"puno_ime":"Joris Robben","nickname":"Joyo","pozicija":"Striker","godina_prikljucenja":2022,"tim_id":10},              +
+  {"igrac_id":47,"puno_ime":"Finlay Ferguson","nickname":"Rise","pozicija":"Midfielder","godina_prikljucenja":2022,"tim_id":10},        +
+  {"igrac_id":48,"puno_ime":"Axel Lopez","nickname":"Astro","pozicija":"Defender","godina_prikljucenja":2023,"tim_id":10},              +
+  {"igrac_id":49,"puno_ime":"Oleksandr Kostyliev","nickname":"s1mple","pozicija":"AWPer","godina_prikljucenja":2016,"tim_id":11},       +
+  {"igrac_id":50,"puno_ime":"Denis Sharipov","nickname":"electroNic","pozicija":"Rifler","godina_prikljucenja":2017,"tim_id":11},       +
+  {"igrac_id":51,"puno_ime":"Ilya Zalutskiy","nickname":"Perfecto","pozicija":"Support","godina_prikljucenja":2020,"tim_id":11},        +
+  {"igrac_id":52,"puno_ime":"Andrii Kukharskyi","nickname":"npl","pozicija":"Entry Fragger","godina_prikljucenja":2023,"tim_id":11},    +
+  {"igrac_id":53,"puno_ime":"Valerii Vakhovskyi","nickname":"b1t","pozicija":"Rifler","godina_prikljucenja":2021,"tim_id":11}]
+(1 row)
+

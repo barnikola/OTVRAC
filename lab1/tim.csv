@@ -1,0 +1,12 @@
+tim_id,naziv,skracenica,godina_osnutka,esport,broj_trofeja,drzava,pobjede2023,porazi2023,regija,ukupna_zarada
+1,T1,T1,2003,League of Legends,10,Južna Koreja,96,56,LCK,9418521.00
+2,JD Gaming,JDG,2017,League of Legends,5,Kina,95,30,LPL,2341588.00
+3,Gen.G,GEN,2017,League of Legends,3,Južna Koreja,95,38,LCK,1943449.00
+4,Bilibili Gaming,BLG,2017,League of Legends,2,Kina,100,60,LPL,1442683.00
+5,G2 Esports,G2,2014,League of Legends,9,Europa,68,32,LEC,3603017.00
+6,Fnatic,FNC,2004,League of Legends,7,Europa,37,38,LEC,3480526.00
+7,FlyQuest,FLY,2017,League of Legends,1,SAD,25,23,LCS,497450.00
+8,Cloud9,C9,2013,League of Legends,6,SAD,50,25,LCS,2662341.00
+9,Sentinels,SEN,2020,Valorant,3,SAD,37,30,NA,2500000.00
+10,Moist Esports,MOIST,2021,Rocket League,2,SAD,16,14,EU,440880.00
+11,Natus Vincere,NaVi,2009,CS:GO,11,Ukrajina,74,56,EU,9483067.00
