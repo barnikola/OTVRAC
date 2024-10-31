@@ -1,48 +1,3 @@
-# Baza podataka esports timova README
-
-Ovaj skup podataka sadrži informacije o esports timovima i njihovim igračima
-
-## Licenca
-
-## Autor
-
-Nikola Baretić
-
-## Verzija podataka
-
-1.0
-
-## Jezik podataka
-
-Hrvatski
-
-## Opis podataka
-
-Tablica tim
-
-- 'naziv': Naziv tima
-- 'skracenica': Skracenica tima
-- 'godinaOsnutka': Godina osnutka tima
-- 'esport': Esport u kojem se natječu
-- 'brojTrofeja': Broj osvojenih trofeja
-- 'drzava': Država iz koje tim dolazi
-- 'pobjede2023': Broj pobjeda u godini 2023
-- 'porazi2023': Broj poraza u godini 2023
-- 'igraci2023': Igrači u godini 2023
-- 'regija': Regija u kojoj se tim natječe
-- 'ukupnaZarada': Ukupna zarada tima u USD
-
-Tablica igraci
-
-- 'igrac_id': Jedinstveni ID za svakog igrača
-- 'puno_ime': Puno ime igrača
-- 'nickname': Igrački nadimak (nickname) igrača
-- 'pozicija': Pozicija igrača u timu (npr. Jungle, ADC)
-- 'godina_prikljucenja': Godina kada se igrač pridružio timu
-- 'tim_id': Veza prema timu kojem igrač pripada
-
-##
-
 # Baza podataka o Esport Timovima i Igračima
 
 Ovaj skup podataka sadrži informacije o raznim esport timovima i njihovim igračima, uključujući podatke o njihovim uspjesima iz različitih igara (League of Legends, Valorant, CS:GO, Rocket League). Podaci su strukturirani u dvije tablice: **tim** i **igraci**.
@@ -50,7 +5,7 @@ Ovaj skup podataka sadrži informacije o raznim esport timovima i njihovim igra�
 - **Licenca**: [Creative Commons Zero v1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 - **Autor**: Nikola Baretić
-- **Kontak**: nikola.baretic@gmail.com
+- **Kontak**: nikola.baretic@fer.hr
 - **Verzija skupa podataka**: 1.0
 - **Jezik podataka**: Hrvatski
 - **Opis atributa u tablici `tim`**:
