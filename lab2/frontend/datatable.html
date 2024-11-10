@@ -134,7 +134,7 @@
         document.body.removeChild(a);
     }
 
-    fetch('/api/igraci')
+    fetch('/data')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.querySelector('#igraciTable tbody');
@@ -180,7 +180,7 @@
                 const searchTerm = document.getElementById('searchInput').value;
 
                 table.search('').columns().search('');
-                if (columnId === 123) { // Updated to match "Sva polja"
+                if (columnId === 123) {
                     table.search(searchTerm).draw();
                 } else {
                     table.column(columnId).search(searchTerm).draw();
@@ -212,7 +212,7 @@
                     filteredData.push(rowObj);
                 });
                 const csv = arrayToCSV(filteredData);
-                downloadFile(csv, 'rezPodaci.csv', 'text/csv');
+                downloadFile(csv, 'rezultati.csv', 'text/csv');
             });
 
             document.getElementById('downloadJSON').addEventListener('click', function () {
@@ -240,7 +240,7 @@
                     filteredData.push(rowObj);
                 });
                 const json = customJSON(filteredData);
-                downloadFile(json, 'rezPodaci.json', 'application/json');
+                downloadFile(json, 'rezultati.json', 'application/json');
             });
         })
         .catch(error => {

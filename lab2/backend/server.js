@@ -11,10 +11,10 @@ app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, '../frontend')));
 app.use(express.static(path.join(__dirname, '..')));
 
-app.get('/api/igraci', async (req, res) => {
+app.get('/data', async (req, res) => {
     try {
         const result = await client.query('SELECT * FROM public.igraci_razdvojeni');
-        res.json(result.rows); // Send the data as JSON
+        res.json(result.rows);
     } catch (err) {
         console.error(err);
         res.status(500).send('Error retrieving data');

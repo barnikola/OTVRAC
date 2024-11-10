@@ -4,7 +4,7 @@ const path = require('path');
 
 // Route to render the home page
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));  // Putanja do index.html u frontend direktoriju
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 module.exports = router;

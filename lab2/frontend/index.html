@@ -19,18 +19,18 @@
 <!--<p>Ovaj skup podataka sadrži informacije o raznim esport timovima i njihovim igračima, uključujući podatke o njihovim uspjesima u raznim igrama (League of Legends, Valorant, CS:GO, Rocket League).</p>-->
 <div style="display:flex; height: 50px;padding: 10px; flex-direction: row; justify-content: flex-start; ">
 
-        <a href="#" onclick="downloadCSV()" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite ; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Download CSV file</a>
+        <a href="#" onclick="downloadCSV()" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite ; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Download CSV </a>
 
 
-        <a href="#" onclick="downloadJSON()" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite ; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Download JSON file</a>
+        <a href="#" onclick="downloadJSON()" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite ; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Download JSON </a>
 
 
-    <a href="datatable.html" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite ; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Datatables tablica</a>
+    <a href="datatable.html" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite ; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Tablica</a>
 
 </div>
-<div style="display: flex; justify-content: center;">
-<iframe  width="560" height="315" src="https://www.youtube.com/embed/Sxw9Ln0WdIE?si=az4xy4R7xci0GOF7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<!--<div style="display: flex; justify-content: center;">-->
+<!--<iframe  width="560" height="315" src="https://www.youtube.com/embed/Sxw9Ln0WdIE?si=az4xy4R7xci0GOF7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+<!--</div>-->
 <md-block style="text-align: center ">
     # Baza podataka o Esport Timovima i Igračima
 
@@ -151,23 +151,23 @@
     }
 
     function downloadCSV() {
-        fetch('/api/igraci')
+        fetch('/data')
             .then(response => response.json())
             .then(data => {
                 const csv = arrayToCSV(data);
                 downloadFile(csv, 'timoviIgraci.csv', 'text/csv');
             })
-            .catch(error => console.error('Error fetching data for CSV download:', error));
+            .catch(error => console.error('Error fetching data:', error));
     }
 
     function downloadJSON() {
-        fetch('/api/igraci')
+        fetch('/data')
             .then(response => response.json())
             .then(data => {
                 const json = customJSON(data);
                 downloadFile(json, 'timoviIgraci.json', 'application/json');
             })
-            .catch(error => console.error('Error fetching data for JSON download:', error));
+            .catch(error => console.error('Error fetching data:', error));
     }
 
     // Attach event listeners to buttons
