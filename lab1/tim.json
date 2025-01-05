@@ -1,8 +1,8 @@
-                                                                                                           json_agg                                                                                                           
+                                                                                                           json_agg
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- [{"tim_id":1,"naziv":"T1","skracenica":"T1","godina_osnutka":2003,"esport":"League of Legends","broj_trofeja":10,"drzava":"Južna Koreja","pobjede2023":96,"porazi2023":56,"regija":"LCK","ukupna_zarada":9418521.00},       +
+ [{"tim_id":1,"naziv":"T1","skracenica":"T1","godina_osnutka":2003,"esport":"League of Legends","broj_trofeja":10,"drzava":"Juï¿½na Koreja","pobjede2023":96,"porazi2023":56,"regija":"LCK","ukupna_zarada":9418521.00},       +
   {"tim_id":2,"naziv":"JD Gaming","skracenica":"JDG","godina_osnutka":2017,"esport":"League of Legends","broj_trofeja":5,"drzava":"Kina","pobjede2023":95,"porazi2023":30,"regija":"LPL","ukupna_zarada":2341588.00},        +
-  {"tim_id":3,"naziv":"Gen.G","skracenica":"GEN","godina_osnutka":2017,"esport":"League of Legends","broj_trofeja":3,"drzava":"Južna Koreja","pobjede2023":95,"porazi2023":38,"regija":"LCK","ukupna_zarada":1943449.00},    +
+  {"tim_id":3,"naziv":"Gen.G","skracenica":"GEN","godina_osnutka":2017,"esport":"League of Legends","broj_trofeja":3,"drzava":"Juï¿½na Koreja","pobjede2023":95,"porazi2023":38,"regija":"LCK","ukupna_zarada":1943449.00},    +
   {"tim_id":4,"naziv":"Bilibili Gaming","skracenica":"BLG","godina_osnutka":2017,"esport":"League of Legends","broj_trofeja":2,"drzava":"Kina","pobjede2023":100,"porazi2023":60,"regija":"LPL","ukupna_zarada":1442683.00}, +
   {"tim_id":5,"naziv":"G2 Esports","skracenica":"G2","godina_osnutka":2014,"esport":"League of Legends","broj_trofeja":9,"drzava":"Europa","pobjede2023":68,"porazi2023":32,"regija":"LEC","ukupna_zarada":3603017.00},      +
   {"tim_id":6,"naziv":"Fnatic","skracenica":"FNC","godina_osnutka":2004,"esport":"League of Legends","broj_trofeja":7,"drzava":"Europa","pobjede2023":37,"porazi2023":38,"regija":"LEC","ukupna_zarada":3480526.00},         +

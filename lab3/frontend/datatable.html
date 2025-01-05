@@ -44,6 +44,7 @@
 <table id="igraciTable">
     <thead>
     <tr>
+        <th>Igrac ID</th>
         <th>Tim ID</th>
         <th>Naziv</th>
         <th>Skracenica</th>
@@ -74,7 +75,7 @@
 <script>
     function arrayToCSV(data) {
         const headers = [
-            "tim_id", "naziv", "skracenica", "godina_osnutka", "esport",
+            "igrac_id", "tim_id", "naziv", "skracenica", "godina_osnutka", "esport",
             "broj_trofeja", "drzava", "pobjede2023", "porazi2023",
             "regija", "ukupna_zarada", "ime", "prezime", "nickname",
             "pozicija", "godina_prikljucenja"
@@ -93,6 +94,7 @@
         const formattedData = data.reduce((acc, row) => {
             const team = acc.find(t => t.Naziv === row.naziv);
             const player = {
+                id: row.igrac_id,
                 Ime: row.ime,
                 Prezime: row.prezime,
                 Nickname: row.nickname,
@@ -138,10 +140,12 @@
         .then(response => response.json())
         .then(data => {
             const tableBody = document.querySelector('#igraciTable tbody');
-
+            i = 1;
             data.forEach(igrac => {
+
                 const row = document.createElement('tr');
                 row.innerHTML = `
+                    <td>${i}</td>
                     <td>${igrac.tim_id}</td>
                     <td>${igrac.naziv}</td>
                     <td>${igrac.skracenica}</td>
@@ -160,6 +164,7 @@
                     <td>${igrac.godina_prikljucenja}</td>
                 `;
                 tableBody.appendChild(row);
+                i++;
             });
 
             const table = $('#igraciTable').DataTable({
@@ -192,22 +197,23 @@
                 table.rows({ filter: 'applied' }).every(function () {
                     const rowData = this.data();
                     const rowObj = {
-                        tim_id: rowData[0],
-                        naziv: rowData[1],
-                        skracenica: rowData[2],
-                        godina_osnutka: rowData[3],
-                        esport: rowData[4],
-                        broj_trofeja: rowData[5],
-                        drzava: rowData[6],
-                        pobjede2023: rowData[7],
-                        porazi2023: rowData[8],
-                        regija: rowData[9],
-                        ukupna_zarada: rowData[10],
-                        ime: rowData[11],
-                        prezime: rowData[12],
-                        nickname: rowData[13],
-                        pozicija: rowData[14],
-                        godina_prikljucenja: rowData[15]
+                        igrac_id: rowData[0],
+                        tim_id: rowData[1],
+                        naziv: rowData[2],
+                        skracenica: rowData[3],
+                        godina_osnutka: rowData[4],
+                        esport: rowData[5],
+                        broj_trofeja: rowData[6],
+                        drzava: rowData[7],
+                        pobjede2023: rowData[8],
+                        porazi2023: rowData[9],
+                        regija: rowData[10],
+                        ukupna_zarada: rowData[11],
+                        ime: rowData[12],
+                        prezime: rowData[13],
+                        nickname: rowData[14],
+                        pozicija: rowData[15],
+                        godina_prikljucenja: rowData[16]
                     };
                     filteredData.push(rowObj);
                 });
@@ -220,22 +226,23 @@
                 table.rows({ filter: 'applied' }).every(function () {
                     const rowData = this.data();
                     const rowObj = {
-                        tim_id: rowData[0],
-                        naziv: rowData[1],
-                        skracenica: rowData[2],
-                        godina_osnutka: rowData[3],
-                        esport: rowData[4],
-                        broj_trofeja: rowData[5],
-                        drzava: rowData[6],
-                        pobjede2023: rowData[7],
-                        porazi2023: rowData[8],
-                        regija: rowData[9],
-                        ukupna_zarada: rowData[10],
-                        ime: rowData[11],
-                        prezime: rowData[12],
-                        nickname: rowData[13],
-                        pozicija: rowData[14],
-                        godina_prikljucenja: rowData[15]
+                        igrac_id: rowData[0],
+                        tim_id: rowData[1],
+                        naziv: rowData[2],
+                        skracenica: rowData[3],
+                        godina_osnutka: rowData[4],
+                        esport: rowData[5],
+                        broj_trofeja: rowData[6],
+                        drzava: rowData[7],
+                        pobjede2023: rowData[8],
+                        porazi2023: rowData[9],
+                        regija: rowData[10],
+                        ukupna_zarada: rowData[11],
+                        ime: rowData[12],
+                        prezime: rowData[13],
+                        nickname: rowData[14],
+                        pozicija: rowData[15],
+                        godina_prikljucenja: rowData[16]
                     };
                     filteredData.push(rowObj);
                 });

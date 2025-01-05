@@ -1,0 +1,363 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Esports Teams and Players API",
+    "version": "1.0.0",
+    "description": "API for managing esports teams and players, implementing CRUD operations with custom response wrappers."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local server"
+    }
+  ],
+  "paths": {
+    "/all": {
+      "get": {
+        "summary": "Get all teams and players",
+        "responses": {
+          "200": {
+            "description": "List of teams and players",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Team"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error retrieving data"
+          }
+        }
+      }
+    },
+    "/igraci/{id}": {
+      "get": {
+        "summary": "Get a single player by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Player details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Player"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Player not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error retrieving data"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a player",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePlayer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Player updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Player not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error updating player"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a player",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Player deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Player not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error deleting player"
+          }
+        }
+      }
+    },
+    "/igraci": {
+      "post": {
+        "summary": "Add a new player",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewPlayer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Player and team successfully added",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error adding player"
+          }
+        }
+      }
+    },
+    "/timovi/top-prihodi/{limit}": {
+      "get": {
+        "summary": "Get top teams by revenue",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Top teams by revenue",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Team"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error retrieving data"
+          }
+        }
+      }
+    },
+    "/timovi/{tim_id}/igraci": {
+      "get": {
+        "summary": "Get players by team ID",
+        "parameters": [
+          {
+            "name": "tim_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Players for the specified team",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Player"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error retrieving data"
+          }
+        }
+      }
+    },
+    "/timovi/regija/{regija}": {
+      "get": {
+        "summary": "Get teams by region",
+        "parameters": [
+          {
+            "name": "regija",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Teams in the specified region",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Team"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error retrieving data"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Team": {
+        "type": "object",
+        "properties": {
+          "Naziv": { "type": "string" },
+          "Zemlja": { "type": "string" },
+          "Godina_osnutka": { "type": "integer" },
+          "Skracenica": { "type": "string" },
+          "Esport": { "type": "string" },
+          "Broj_trofeja": { "type": "integer" },
+          "Pobjede2023": { "type": "integer" },
+          "Porazi2023": { "type": "integer" },
+          "Regija": { "type": "string" },
+          "Ukupna_zarada": { "type": "number" },
+          "Igraci": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Player" }
+          }
+        }
+      },
+      "Player": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "Ime": { "type": "string" },
+          "Prezime": { "type": "string" },
+          "Nickname": { "type": "string" },
+          "Pozicija": { "type": "string" },
+          "Godina_prikljucenja": { "type": "integer" }
+        }
+      },
+      "NewPlayer": {
+        "type": "object",
+        "properties": {
+          "naziv": { "type": "string" },
+          "skracenica": { "type": "string" },
+          "godina_osnutka": { "type": "integer" },
+          "esport": { "type": "string" },
+          "broj_trofeja": { "type": "integer" },
+          "drzava": { "type": "string" },
+          "pobjede2023": { "type": "integer" },
+          "porazi2023": { "type": "integer" },
+          "regija": { "type": "string" },
+          "ukupna_zarada": { "type": "number" },
+          "ime": { "type": "string" },
+          "prezime": { "type": "string" },
+          "nickname": { "type": "string" },
+          "pozicija": { "type": "string" },
+          "godina_prikljucenja": { "type": "integer" }
+        }
+      },
+      "UpdatePlayer": {
+        "type": "object",
+        "properties": {
+          "nickname": { "type": "string" },
+          "pozicija": { "type": "string" },
+          "godina_prikljucenja": { "type": "integer" },
+          "tim_id": { "type": "integer" }
+        }
+      },
+      "Response": {
+        "type": "object",
+        "properties": {
+          "message": { "type": "string" }
+        }
+      }
+    }
+  }
+}
