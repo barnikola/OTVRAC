@@ -106,7 +106,7 @@ router.post("/igraci", async (req, res) => {
             timId = teamResult.rows[0].tim_id;
         } else {
             const maxTimIdResult = await client.query("SELECT MAX(tim_id) AS max_id FROM tim");
-            const maxTimId = maxTimIdResult.rows[0].max_id || 0; // If no teams exist, start with 0
+            const maxTimId = maxTimIdResult.rows[0].max_id || 0;
             timId = maxTimId + 1;
 
             await client.query(
@@ -140,7 +140,7 @@ router.post("/igraci", async (req, res) => {
             throw new Error("Player already exists in the database.");
         } else {
             const maxIgracIdResult = await client.query("SELECT MAX(igrac_id) AS max_id FROM igraci");
-            const maxIgracId = maxIgracIdResult.rows[0].max_id || 0; // If no players exist, start with 0
+            const maxIgracId = maxIgracIdResult.rows[0].max_id || 0;
             igracId = maxIgracId + 1;
 
             await client.query(
@@ -150,7 +150,6 @@ router.post("/igraci", async (req, res) => {
             );
         }
 
-        // Commit the transaction
         await client.query("COMMIT");
 
         res.status(201).json({ message: "Player and team successfully added!" });
