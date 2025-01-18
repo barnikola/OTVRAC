@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <title>DataTable</title>
+</head>
+<body style="background-color: lightgreen">
+<div style="display: block">
+    <a href="index.html" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite ; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Home</a>
+</div>
+<div>
+    <label for="columnSelect">Pretraži po:</label>
+    <select id="columnSelect">
+        <option value="123">Sva polja</option>
+        <option value="0">Tim ID</option>
+        <option value="1">Naziv</option>
+        <option value="2">Skracenica</option>
+        <option value="3">Godina Osnutka</option>
+        <option value="4">Esport</option>
+        <option value="5">Broj Trofeja</option>
+        <option value="6">Drzava</option>
+        <option value="7">Pobjede 2023</option>
+        <option value="8">Porazi 2023</option>
+        <option value="9">Regija</option>
+        <option value="10">Ukupna Zarada</option>
+        <option value="11">Ime</option>
+        <option value="12">Prezime</option>
+        <option value="13">Nickname</option>
+        <option value="14">Pozicija</option>
+        <option value="15">Godina Prikljucenja</option>
+    </select>
+
+    <input type="text" id="searchInput" placeholder="Unesite vrijednost">
+    <button id="searchButton">Pretraži</button>
+    <button id="reset">Reset</button>
+</div>
+
+<table id="igraciTable">
+    <thead>
+    <tr>
+        <th>Igrac ID</th>
+        <th>Tim ID</th>
+        <th>Naziv</th>
+        <th>Skracenica</th>
+        <th>Godina Osnutka</th>
+        <th>Esport</th>
+        <th>Broj Trofeja</th>
+        <th>Drzava</th>
+        <th>Pobjede 2023</th>
+        <th>Porazi 2023</th>
+        <th>Regija</th>
+        <th>Ukupna Zarada</th>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Nickname</th>
+        <th>Pozicija</th>
+        <th>Godina Prikljucenja</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<div>
+    <button id="downloadCSV">Download CSV</button>
+    <button id="downloadJSON">Download JSON</button>
+</div>
+
+<script>
+    function arrayToCSV(data) {
+        const headers = [
+            "igrac_id", "tim_id", "naziv", "skracenica", "godina_osnutka", "esport",
+            "broj_trofeja", "drzava", "pobjede2023", "porazi2023",
+            "regija", "ukupna_zarada", "ime", "prezime", "nickname",
+            "pozicija", "godina_prikljucenja"
+        ];
+        const csvRows = [headers.join(",")];
+
+        data.forEach(row => {
+            const values = headers.map(header => JSON.stringify(row[header] || ''));
+            csvRows.push(values.join(","));
+        });
+
+        return csvRows.join("\n");
+    }
+
+    function customJSON(data) {
+        const formattedData = data.reduce((acc, row) => {
+            const team = acc.find(t => t.Naziv === row.naziv);
+            const player = {
+                id: row.igrac_id,
+                Ime: row.ime,
+                Prezime: row.prezime,
+                Nickname: row.nickname,
+                Pozicija: row.pozicija,
+                Godina_prikljucenja: row.godina_prikljucenja
+            };
+            if (team) {
+                team.Igraci.push(player);
+            } else {
+                acc.push({
+                    Naziv: row.naziv,
+                    Zemlja: row.drzava,
+                    Godina_osnutka: row.godina_osnutka,
+                    Skracenica: row.skracenica,
+                    Esport: row.esport,
+                    Broj_trofeja: row.broj_trofeja,
+                    Pobjede2023: row.pobjede2023,
+                    Porazi2023: row.porazi2023,
+                    Regija: row.regija,
+                    Ukupna_zarada: row.ukupna_zarada,
+                    Igraci: [player]
+                });
+            }
+            return acc;
+        }, []);
+        return JSON.stringify(formattedData, null, 2);
+    }
+
+    function downloadFile(data, filename, type) {
+        const blob = new Blob([data], { type });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.style.display = "none";
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    }
+
+    fetch('/data')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.querySelector('#igraciTable tbody');
+            i = 1;
+            data.forEach(igrac => {
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${i}</td>
+                    <td>${igrac.tim_id}</td>
+                    <td>${igrac.naziv}</td>
+                    <td>${igrac.skracenica}</td>
+                    <td>${igrac.godina_osnutka}</td>
+                    <td>${igrac.esport}</td>
+                    <td>${igrac.broj_trofeja}</td>
+                    <td>${igrac.drzava}</td>
+                    <td>${igrac.pobjede2023}</td>
+                    <td>${igrac.porazi2023}</td>
+                    <td>${igrac.regija}</td>
+                    <td>${igrac.ukupna_zarada}</td>
+                    <td>${igrac.ime}</td>
+                    <td>${igrac.prezime}</td>
+                    <td>${igrac.nickname}</td>
+                    <td>${igrac.pozicija}</td>
+                    <td>${igrac.godina_prikljucenja}</td>
+                `;
+                tableBody.appendChild(row);
+                i++;
+            });
+
+            const table = $('#igraciTable').DataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: true,
+                lengthChange: true,
+                pageLength: 10,
+                responsive: true
+            });
+            document.getElementById('reset').addEventListener('click', function () {
+                table.search('').columns().search('').draw();
+            });
+
+            document.getElementById('searchButton').addEventListener('click', function () {
+                const columnId = parseInt(document.getElementById('columnSelect').value, 10);
+                const searchTerm = document.getElementById('searchInput').value;
+
+                table.search('').columns().search('');
+                if (columnId === 123) {
+                    table.search(searchTerm).draw();
+                } else {
+                    table.column(columnId).search(searchTerm).draw();
+                }
+            });
+
+            document.getElementById('downloadCSV').addEventListener('click', function () {
+                const filteredData = [];
+                table.rows({ filter: 'applied' }).every(function () {
+                    const rowData = this.data();
+                    const rowObj = {
+                        igrac_id: rowData[0],
+                        tim_id: rowData[1],
+                        naziv: rowData[2],
+                        skracenica: rowData[3],
+                        godina_osnutka: rowData[4],
+                        esport: rowData[5],
+                        broj_trofeja: rowData[6],
+                        drzava: rowData[7],
+                        pobjede2023: rowData[8],
+                        porazi2023: rowData[9],
+                        regija: rowData[10],
+                        ukupna_zarada: rowData[11],
+                        ime: rowData[12],
+                        prezime: rowData[13],
+                        nickname: rowData[14],
+                        pozicija: rowData[15],
+                        godina_prikljucenja: rowData[16]
+                    };
+                    filteredData.push(rowObj);
+                });
+                const csv = arrayToCSV(filteredData);
+                downloadFile(csv, 'rezultati.csv', 'text/csv');
+            });
+
+            document.getElementById('downloadJSON').addEventListener('click', function () {
+                const filteredData = [];
+                table.rows({ filter: 'applied' }).every(function () {
+                    const rowData = this.data();
+                    const rowObj = {
+                        igrac_id: rowData[0],
+                        tim_id: rowData[1],
+                        naziv: rowData[2],
+                        skracenica: rowData[3],
+                        godina_osnutka: rowData[4],
+                        esport: rowData[5],
+                        broj_trofeja: rowData[6],
+                        drzava: rowData[7],
+                        pobjede2023: rowData[8],
+                        porazi2023: rowData[9],
+                        regija: rowData[10],
+                        ukupna_zarada: rowData[11],
+                        ime: rowData[12],
+                        prezime: rowData[13],
+                        nickname: rowData[14],
+                        pozicija: rowData[15],
+                        godina_prikljucenja: rowData[16]
+                    };
+                    filteredData.push(rowObj);
+                });
+                const json = customJSON(filteredData);
+                downloadFile(json, 'rezultati.json', 'application/json');
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+</script>
+
+
+</body>
+</html>

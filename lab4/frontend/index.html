@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+    <script src="https://cdn.datatables.net/2.1.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <title>Baza podataka o Esport Timovima i Igračima</title>
+    <meta name="description" content="Skup podataka o raznim esport timovima i njihovim igračima, uključujući informacije o njihovim uspjesima u raznim igrama kao što su League of Legends, Valorant, CS:GO, i Rocket League.">
+    <meta name="author" content="Nikola Baretić">
+    <meta name="license" content="Creative Commons Zero v1.0 Universal (CC0 1.0)">
+    <meta name="version" content="1.0">
+    <meta name="language" content="Hrvatski">
+    <meta name="contact" content="nikola.baretic@fer.hr">
+</head>
+<body style="background-color: lightgreen">
+<!--<h1>Baza podataka o Esport Timovima i Igračima</h1>-->
+<!--<p>Ovaj skup podataka sadrži informacije o raznim esport timovima i njihovim igračima, uključujući podatke o njihovim uspjesima u raznim igrama (League of Legends, Valorant, CS:GO, Rocket League).</p>-->
+<div id="loginHeader" style="display:flex; height: 50px;padding: 10px; flex-direction: row; justify-content: flex-start; ">
+    <a href="#" onclick="refresh()" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Osvježi preslike</a>
+    <a id="csv" href="#" onclick="downloadCSV()" style="width:fit-content; margin-left:15px; display: none; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Preuzmi CSV</a>
+    <a id="json" href="#" onclick="downloadJSON()" style="width:fit-content; margin-left:15px; display: none; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Preuzmi JSON</a>
+    <a id="csvfile" href="../timoviIgraci.csv" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Preuzmi CSV</a>
+    <a id="jsonfile" href="../timoviIgraci.json" download="timoviIgraci.json" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Preuzmi JSON</a>
+    <a href="datatable.html" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Tablica</a>
+    <a id="login" href="/login" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Prijava</a>
+</div>
+<div id="logoutHeader" style="display:none; height: 50px;padding: 10px; flex-direction: row; justify-content: flex-start; ">
+    <a href="#" onclick="refresh()" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Osvježi preslike</a>
+    <a id="csv" href="#" onclick="downloadCSV()" style="width:fit-content; margin-left:15px; display: none; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Preuzmi CSV</a>
+    <a id="json" href="#" onclick="downloadJSON()" style="width:fit-content; margin-left:15px; display: none; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Preuzmi JSON</a>
+    <a id="csvfile" href="../timoviIgraci.csv" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Preuzmi CSV</a>
+    <a id="jsonfile" href="../timoviIgraci.json" download="timoviIgraci.json" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Preuzmi JSON</a>
+    <a href="datatable.html" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Tablica</a>
+    <a href="/profile" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Korisnički račun</a>
+    <a id="logout" href="/logout" style="width:fit-content; margin-left:15px; display: block; background-color:antiquewhite; padding: 10px 10px; text-decoration: none; border-radius: 5px;">Odjava</a></div>
+</div>
+<!--<div style="display: flex; justify-content: center;">-->
+<!--<iframe  width="560" height="315" src="https://www.youtube.com/embed/Sxw9Ln0WdIE?si=az4xy4R7xci0GOF7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+<!--</div>-->
+<md-block style="text-align: center ">
+    # Baza podataka o Esport Timovima i Igračima
+
+    Ovaj skup podataka sadrži informacije o raznim esport timovima i njihovim igračima, uključujući podatke o njihovim uspjesima iz različitih igara (League of Legends, Valorant, CS:GO, Rocket League). Podaci su strukturirani u dvije tablice: **tim** i **igraci**.
+
+    - **Licenca**: [Creative Commons Zero v1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+    - **Autor**: Nikola Baretić
+    - **Kontak**: nikola.baretic@fer.hr
+    - **Verzija skupa podataka**: 1.0
+    - **Jezik podataka**: Hrvatski
+
+    ### Opis atributa u tablici `timovi_igraci`
+
+    - **`Tim ID`**: Jedinstveni identifikator za svaki tim (INTEGER).
+    - **`Naziv`**: Naziv tima (STRING).
+    - **`Skracenica`**: Službena skraćenica tima (STRING).
+    - **`Godina Osnutka`**: Godina kada je tim osnovan (INTEGER).
+    - **`Esport`**: Esport u kojem se tim natječe (STRING).
+    - **`Broj Trofeja`**: Broj trofeja koje je tim osvojio (INTEGER).
+    - **`Drzava`**: Država iz koje dolazi tim (STRING).
+    - **`Pobjede 2023`**: Broj pobjeda koje je tim ostvario u sezoni 2023 (INTEGER).
+    - **`Porazi 2023`**: Broj poraza koje je tim pretrpio u sezoni 2023 (INTEGER).
+    - **`Regija`**: Regija u kojoj se tim natječe (STRING).
+    - **`Ukupna Zarada`**: Ukupna zarada tima izražena u USD (DECIMAL).
+    - **`Ime`**: Ime igrača (STRING).
+    - **`Prezime`**: Prezime igrača (STRING).
+    - **`Nickname`**: Igrački nadimak igrača (STRING).
+    - **`Pozicija`**: Pozicija koju igrač zauzima u timu (STRING).
+    - **`Godina Prikljucenja`**: Godina kada se igrač pridružio timu (INTEGER).
+
+
+    - **Datum posljednjeg ažuriranja**: 27.10.2024.
+    - **Učestalost ažuriranja**: Godišnja/po potrebi
+    - **Izvor podataka**: Prikupljeni iz službenih izvora esport liga i relevantnih web stranica.
+
+    ## Distribucija Skupa Podataka
+
+    ### CSV Distribucija
+
+    - **Naslov:** CSV distribucija skupa podataka o esports timovima i njihovim igračima
+    - **Opis:** CSV distribucija skupa podataka o esports timovima i njihovim igračima.
+    - **Medijski tip:** text/csv
+
+    ### JSON Distribucija
+
+    - **Naslov:** JSON distribucija skupa podataka o esports timovima i njihovim igračima.
+    - **Opis:** JSON distribucija skupa podataka o esports timovima i njihovim igračima.
+    - **Medijska vrsta:** application/json
+
+    ## Povijest verzija skupa podataka
+
+    | **Verzija** | **Datum izdavanja** | **Promjene**                |
+    | ----------- | ------------------- | --------------------------- |
+    | 1.0         | 27.10.2024          | Prva verzija skupa podataka |
+</md-block>
+<script>
+    function arrayToCSV(data) {
+        const headers = [
+            "tim_id", "naziv", "skracenica", "godina_osnutka", "esport",
+            "broj_trofeja", "drzava", "pobjede2023", "porazi2023",
+            "regija", "ukupna_zarada", "ime", "prezime", "nickname",
+            "pozicija", "godina_prikljucenja"
+        ];
+        const csvRows = [headers.join(",")];
+
+        data.forEach(row => {
+            const values = headers.map(header => JSON.stringify(row[header] || ''));
+            csvRows.push(values.join(","));
+        });
+
+        return csvRows.join("\n");
+    }
+
+    function customJSON(data) {
+        const formattedData = data.reduce((acc, row) => {
+            const team = acc.find(t => t.Naziv === row.naziv);
+            const player = {
+                Ime: row.ime,
+                Prezime: row.prezime,
+                Nickname: row.nickname,
+                Pozicija: row.pozicija,
+                Godina_prikljucenja: row.godina_prikljucenja
+            };
+            if (team) {
+                team.Igraci.push(player);
+            } else {
+                acc.push({
+                    Naziv: row.naziv,
+                    Zemlja: row.drzava,
+                    Godina_osnutka: row.godina_osnutka,
+                    Skracenica: row.skracenica,
+                    Esport: row.esport,
+                    Broj_trofeja: row.broj_trofeja,
+                    Pobjede2023: row.pobjede2023,
+                    Porazi2023: row.porazi2023,
+                    Regija: row.regija,
+                    Ukupna_zarada: row.ukupna_zarada,
+                    Igraci: [player]
+                });
+            }
+            return acc;
+        }, []);
+        return JSON.stringify(formattedData, null, 2);
+    }
+
+    function downloadFile(data, filename, type) {
+        const blob = new Blob([data], { type });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.style.display = "none";
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    }
+
+    function downloadCSV() {
+        fetch('/data')
+            .then(response => response.json())
+            .then(data => {
+                const csv = arrayToCSV(data);
+                downloadFile(csv, 'timoviIgraci.csv', 'text/csv');
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }
+
+    function downloadJSON() {
+        fetch('/data')
+            .then(response => response.json())
+            .then(data => {
+                const json = customJSON(data);
+                downloadFile(json, 'timoviIgraci.json', 'application/json');
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }
+
+    function refresh() {
+        document.getElementById('csvfile').style.display = "none";
+        document.getElementById('jsonfile').style.display = "none";
+        document.getElementById('csv').style.display = "block";
+        document.getElementById('json').style.display = "block";
+    }
+
+    function update() {
+        const login = document.getElementById('login');
+        const logout = document.getElementById('logout');
+
+        if (isAuth) {
+            login.style.display = "none";
+            logout.style.display = "block";
+        } else {
+            login.style.display = "block";
+            logout.style.display = "none";
+        }
+    }
+
+    update();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": [],
+  "title": "Esports timovi i igrači",
+  "description": "Skup esports timova i igrača za kolegij Otvoreno računarstvo",
+  "required": [
+    "Naziv",
+    "Zemlja",
+    "Godina_osnutka",
+    "Skracenica",
+    "Esport",
+    "Broj_trofeja",
+    "Pobjede2023",
+    "Porazi2023",
+    "Regija",
+    "Ukupna_zarada",
+    "Igraci"
+  ],
+  "properties": {
+    "Naziv": {
+      "type": "string",
+      "title": "The Naziv Schema",
+      "examples": [
+        "T1"
+      ]
+    },
+    "Zemlja": {
+      "type": "string",
+      "title": "The Zemlja Schema",
+      "examples": [
+        "Južna Koreja"
+      ]
+    },
+    "Godina_osnutka": {
+      "type": "string",
+      "title": "The Godina_osnutka Schema",
+      "examples": [
+        "2003"
+      ]
+    },
+    "Skracenica": {
+      "type": "string",
+      "title": "The Skracenica Schema",
+      "examples": [
+        "T1"
+      ]
+    },
+    "Esport": {
+      "type": "string",
+      "title": "The Esport Schema",
+      "examples": [
+        "League of Legends"
+      ]
+    },
+    "Broj_trofeja": {
+      "type": "string",
+      "title": "The Broj_trofeja Schema",
+      "examples": [
+        "10"
+      ]
+    },
+    "Pobjede2023": {
+      "type": "string",
+      "title": "The Pobjede2023 Schema",
+      "examples": [
+        "96"
+      ]
+    },
+    "Porazi2023": {
+      "type": "string",
+      "title": "The Porazi2023 Schema",
+      "examples": [
+        "56"
+      ]
+    },
+    "Regija": {
+      "type": "string",
+      "title": "The Regija Schema",
+      "examples": [
+        "LCK"
+      ]
+    },
+    "Ukupna_zarada": {
+      "type": "string",
+      "title": "The Ukupna_zarada Schema",
+      "examples": [
+        "9418521.00"
+      ]
+    },
+    "Igraci": {
+      "type": "array",
+      "title": "The Igraci Schema",
+      "items": {
+        "type": "object",
+        "title": "A Schema",
+        "required": [
+          "Ime",
+          "Prezime",
+          "Nickname",
+          "Pozicija",
+          "Godina_prikljucenja"
+        ],
+        "properties": {
+          "Ime": {
+            "type": "string",
+            "title": "The Ime Schema",
+            "examples": [
+              "Lee"
+            ]
+          },
+          "Prezime": {
+            "type": "string",
+            "title": "The Prezime Schema",
+            "examples": [
+              "Sang-hyeok"
+            ]
+          },
+          "Nickname": {
+            "type": "string",
+            "title": "The Nickname Schema",
+            "examples": [
+              "Faker"
+            ]
+          },
+          "Pozicija": {
+            "type": "string",
+            "title": "The Pozicija Schema",
+            "examples": [
+              "Mid"
+            ]
+          },
+          "Godina_prikljucenja": {
+            "type": "string",
+            "title": "The Godina_prikljucenja Schema",
+            "examples": [
+              "2013"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "Ime": "Lee",
+            "Prezime": "Sang-hyeok",
+            "Nickname": "Faker",
+            "Pozicija": "Mid",
+            "Godina_prikljucenja": "2013"
+          }
+        ]
+      }
+    }
+  },
+  "examples": [
+    {
+      "Naziv": "T1",
+      "Zemlja": "Južna Koreja",
+      "Godina_osnutka": "2003",
+      "Skracenica": "T1",
+      "Esport": "League of Legends",
+      "Broj_trofeja": "10",
+      "Pobjede2023": "96",
+      "Porazi2023": "56",
+      "Regija": "LCK",
+      "Ukupna_zarada": "9418521.00",
+      "Igraci": [
+        {
+          "Ime": "Lee",
+          "Prezime": "Sang-hyeok",
+          "Nickname": "Faker",
+          "Pozicija": "Mid",
+          "Godina_prikljucenja": "2013"
+        },
+        {
+          "Ime": "Ryu",
+          "Prezime": "Min-seok",
+          "Nickname": "Zeus",
+          "Pozicija": "Top",
+          "Godina_prikljucenja": "2021"
+        },
+        {
+          "Ime": "Moon",
+          "Prezime": "Hyeon-jun",
+          "Nickname": "Oner",
+          "Pozicija": "Jungle",
+          "Godina_prikljucenja": "2021"
+        },
+        {
+          "Ime": "Lee",
+          "Prezime": "Min-hyung",
+          "Nickname": "Gumayusi",
+          "Pozicija": "ADC",
+          "Godina_prikljucenja": "2020"
+        },
+        {
+          "Ime": "Ryu",
+          "Prezime": "Min-seong",
+          "Nickname": "Keria",
+          "Pozicija": "Support",
+          "Godina_prikljucenja": "2020"
+        }
+      ]
+    }
+  ]
+}

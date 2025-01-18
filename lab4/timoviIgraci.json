@@ -1,0 +1,527 @@
+[
+  {
+    "Naziv": "T1",
+    "Zemlja": "Južna Koreja",
+    "Godina_osnutka": "2003",
+    "Skracenica": "T1",
+    "Esport": "League of Legends",
+    "Broj_trofeja": "10",
+    "Pobjede2023": "96",
+    "Porazi2023": "56",
+    "Regija": "LCK",
+    "Ukupna_zarada": "9418521.00",
+    "Igraci": [
+      {
+        "Ime": "Lee",
+        "Prezime": "Sang-hyeok",
+        "Nickname": "Faker",
+        "Pozicija": "Mid",
+        "Godina_prikljucenja": "2013"
+      },
+      {
+        "Ime": "Ryu",
+        "Prezime": "Min-seok",
+        "Nickname": "Zeus",
+        "Pozicija": "Top",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Moon",
+        "Prezime": "Hyeon-jun",
+        "Nickname": "Oner",
+        "Pozicija": "Jungle",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Lee",
+        "Prezime": "Min-hyung",
+        "Nickname": "Gumayusi",
+        "Pozicija": "ADC",
+        "Godina_prikljucenja": "2020"
+      },
+      {
+        "Ime": "Ryu",
+        "Prezime": "Min-seong",
+        "Nickname": "Keria",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2020"
+      }
+    ]
+  },
+  {
+    "Naziv": "JD Gaming",
+    "Zemlja": "Kina",
+    "Godina_osnutka": "2017",
+    "Skracenica": "JDG",
+    "Esport": "League of Legends",
+    "Broj_trofeja": "5",
+    "Pobjede2023": "95",
+    "Porazi2023": "30",
+    "Regija": "LPL",
+    "Ukupna_zarada": "2341588.00",
+    "Igraci": [
+      {
+        "Ime": "Seo",
+        "Prezime": "Jin-hyeok",
+        "Nickname": "Kanavi",
+        "Pozicija": "Jungle",
+        "Godina_prikljucenja": "2020"
+      },
+      {
+        "Ime": "Zhuo",
+        "Prezime": "Ding",
+        "Nickname": "Knight",
+        "Pozicija": "Mid",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Park",
+        "Prezime": "Jae-hyuk",
+        "Nickname": "Ruler",
+        "Pozicija": "ADC",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Bai",
+        "Prezime": "Jiahao",
+        "Nickname": "369",
+        "Pozicija": "Top",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Lou",
+        "Prezime": "Yunfeng",
+        "Nickname": "Missing",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2023"
+      }
+    ]
+  },
+  {
+    "Naziv": "Gen.G",
+    "Zemlja": "Južna Koreja",
+    "Godina_osnutka": "2017",
+    "Skracenica": "GEN",
+    "Esport": "League of Legends",
+    "Broj_trofeja": "3",
+    "Pobjede2023": "95",
+    "Porazi2023": "38",
+    "Regija": "LCK",
+    "Ukupna_zarada": "1943449.00",
+    "Igraci": [
+      {
+        "Ime": "Han",
+        "Prezime": "Wang-ho",
+        "Nickname": "Peanut",
+        "Pozicija": "Jungle",
+        "Godina_prikljucenja": "2020"
+      },
+      {
+        "Ime": "Jeong",
+        "Prezime": "Ji-hoon",
+        "Nickname": "Chovy",
+        "Pozicija": "Mid",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Park",
+        "Prezime": "Joon-young",
+        "Nickname": "Doran",
+        "Pozicija": "Top",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Kim",
+        "Prezime": "Tae-min",
+        "Nickname": "Peyz",
+        "Pozicija": "ADC",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Yoo",
+        "Prezime": "Min-seok",
+        "Nickname": "Delight",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2023"
+      }
+    ]
+  },
+  {
+    "Naziv": "Bilibili Gaming",
+    "Zemlja": "Kina",
+    "Godina_osnutka": "2017",
+    "Skracenica": "BLG",
+    "Esport": "League of Legends",
+    "Broj_trofeja": "2",
+    "Pobjede2023": "100",
+    "Porazi2023": "60",
+    "Regija": "LPL",
+    "Ukupna_zarada": "1442683.00",
+    "Igraci": [
+      {
+        "Ime": "Chen",
+        "Prezime": "Ze-Bin",
+        "Nickname": "Bin",
+        "Pozicija": "Top",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Peng",
+        "Prezime": "Zhen-Ming",
+        "Nickname": "Xun",
+        "Pozicija": "Jungle",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Zeng",
+        "Prezime": "Qi",
+        "Nickname": "Yagao",
+        "Pozicija": "Mid",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Elk",
+        "Prezime": "",
+        "Nickname": "Elk",
+        "Pozicija": "ADC",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Liu",
+        "Prezime": "Shi-Yu",
+        "Nickname": "On",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2021"
+      }
+    ]
+  },
+  {
+    "Naziv": "G2 Esports",
+    "Zemlja": "Europa",
+    "Godina_osnutka": "2014",
+    "Skracenica": "G2",
+    "Esport": "League of Legends",
+    "Broj_trofeja": "9",
+    "Pobjede2023": "68",
+    "Porazi2023": "32",
+    "Regija": "LEC",
+    "Ukupna_zarada": "3603017.00",
+    "Igraci": [
+      {
+        "Ime": "Sergen",
+        "Prezime": "Çelik",
+        "Nickname": "BrokenBlade",
+        "Pozicija": "Top",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Martin",
+        "Prezime": "Hansen",
+        "Nickname": "Yike",
+        "Pozicija": "Jungle",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Rasmus",
+        "Prezime": "Winther",
+        "Nickname": "Caps",
+        "Pozicija": "Mid",
+        "Godina_prikljucenja": "2018"
+      },
+      {
+        "Ime": "Steven",
+        "Prezime": "Liv",
+        "Nickname": "Hans sama",
+        "Pozicija": "ADC",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Mihael",
+        "Prezime": "Mehle",
+        "Nickname": "Mikyx",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2023"
+      }
+    ]
+  },
+  {
+    "Naziv": "Fnatic",
+    "Zemlja": "Europa",
+    "Godina_osnutka": "2004",
+    "Skracenica": "FNC",
+    "Esport": "League of Legends",
+    "Broj_trofeja": "7",
+    "Pobjede2023": "37",
+    "Porazi2023": "38",
+    "Regija": "LEC",
+    "Ukupna_zarada": "3480526.00",
+    "Igraci": [
+      {
+        "Ime": "Óscar",
+        "Prezime": "Muñoz",
+        "Nickname": "Oscarinin",
+        "Pozicija": "Top",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Iván",
+        "Prezime": "Martín",
+        "Nickname": "Razork",
+        "Pozicija": "Jungle",
+        "Godina_prikljucenja": "2022"
+      },
+      {
+        "Ime": "Marek",
+        "Prezime": "Brázda",
+        "Nickname": "Humanoid",
+        "Pozicija": "Mid",
+        "Godina_prikljucenja": "2022"
+      },
+      {
+        "Ime": "Carl",
+        "Prezime": "Martin",
+        "Nickname": "Rekkles",
+        "Pozicija": "ADC",
+        "Godina_prikljucenja": "2015"
+      },
+      {
+        "Ime": "Adrian",
+        "Prezime": "Trybus",
+        "Nickname": "Trymbi",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2023"
+      }
+    ]
+  },
+  {
+    "Naziv": "FlyQuest",
+    "Zemlja": "SAD",
+    "Godina_osnutka": "2017",
+    "Skracenica": "FLY",
+    "Esport": "League of Legends",
+    "Broj_trofeja": "1",
+    "Pobjede2023": "25",
+    "Porazi2023": "23",
+    "Regija": "LCS",
+    "Ukupna_zarada": "497450.00",
+    "Igraci": [
+      {
+        "Ime": "Jeong",
+        "Prezime": "Ho-bin",
+        "Nickname": "Impact",
+        "Pozicija": "Top",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Lucas",
+        "Prezime": "Tao",
+        "Nickname": "Santorin",
+        "Pozicija": "Jungle",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Loïc",
+        "Prezime": "Dubois",
+        "Nickname": "Toucouille",
+        "Pozicija": "Mid",
+        "Godina_prikljucenja": "2022"
+      },
+      {
+        "Ime": "Bae",
+        "Prezime": "Ho-min",
+        "Nickname": "Prince",
+        "Pozicija": "ADC",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Kim",
+        "Prezime": "Dong-wook",
+        "Nickname": "Winsome",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2023"
+      }
+    ]
+  },
+  {
+    "Naziv": "Cloud9",
+    "Zemlja": "SAD",
+    "Godina_osnutka": "2013",
+    "Skracenica": "C9",
+    "Esport": "League of Legends",
+    "Broj_trofeja": "6",
+    "Pobjede2023": "50",
+    "Porazi2023": "25",
+    "Regija": "LCS",
+    "Ukupna_zarada": "2662341.00",
+    "Igraci": [
+      {
+        "Ime": "Ibrahim",
+        "Prezime": "Allami",
+        "Nickname": "Fudge",
+        "Pozicija": "Top",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Robert",
+        "Prezime": "Huang",
+        "Nickname": "Blaber",
+        "Pozicija": "Jungle",
+        "Godina_prikljucenja": "2020"
+      },
+      {
+        "Ime": "Jiang",
+        "Prezime": "Tao",
+        "Nickname": "Diplex",
+        "Pozicija": "Mid",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Kim",
+        "Prezime": "Min-cheol",
+        "Nickname": "Berserker",
+        "Pozicija": "ADC",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Jesper",
+        "Prezime": "Svenningsen",
+        "Nickname": "Zven",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2022"
+      }
+    ]
+  },
+  {
+    "Naziv": "Sentinels",
+    "Zemlja": "SAD",
+    "Godina_osnutka": "2020",
+    "Skracenica": "SEN",
+    "Esport": "Valorant",
+    "Broj_trofeja": "3",
+    "Pobjede2023": "37",
+    "Porazi2023": "30",
+    "Regija": "NA",
+    "Ukupna_zarada": "2500000.00",
+    "Igraci": [
+      {
+        "Ime": "Hunter",
+        "Prezime": "Mims",
+        "Nickname": "SicK",
+        "Pozicija": "Flex",
+        "Godina_prikljucenja": "2020"
+      },
+      {
+        "Ime": "Jared",
+        "Prezime": "Gitlin",
+        "Nickname": "zombs",
+        "Pozicija": "Controller",
+        "Godina_prikljucenja": "2020"
+      },
+      {
+        "Ime": "Shahzeeb",
+        "Prezime": "Khan",
+        "Nickname": "ShahZaM",
+        "Pozicija": "In-game Leader",
+        "Godina_prikljucenja": "2020"
+      },
+      {
+        "Ime": "Tyson",
+        "Prezime": "Ngo",
+        "Nickname": "TenZ",
+        "Pozicija": "Duelist",
+        "Godina_prikljucenja": "2021"
+      },
+      {
+        "Ime": "Michael",
+        "Prezime": "Grzesiek",
+        "Nickname": "shroud",
+        "Pozicija": "Flex",
+        "Godina_prikljucenja": "2022"
+      }
+    ]
+  },
+  {
+    "Naziv": "Moist Esports",
+    "Zemlja": "SAD",
+    "Godina_osnutka": "2021",
+    "Skracenica": "MOIST",
+    "Esport": "Rocket League",
+    "Broj_trofeja": "2",
+    "Pobjede2023": "16",
+    "Porazi2023": "14",
+    "Regija": "EU",
+    "Ukupna_zarada": "440880.00",
+    "Igraci": [
+      {
+        "Ime": "Joris",
+        "Prezime": "Robben",
+        "Nickname": "Joyo",
+        "Pozicija": "Striker",
+        "Godina_prikljucenja": "2022"
+      },
+      {
+        "Ime": "Finlay",
+        "Prezime": "Ferguson",
+        "Nickname": "Rise",
+        "Pozicija": "Midfielder",
+        "Godina_prikljucenja": "2022"
+      },
+      {
+        "Ime": "Axel",
+        "Prezime": "Lopez",
+        "Nickname": "Astro",
+        "Pozicija": "Defender",
+        "Godina_prikljucenja": "2023"
+      }
+    ]
+  },
+  {
+    "Naziv": "Natus Vincere",
+    "Zemlja": "Ukrajina",
+    "Godina_osnutka": "2009",
+    "Skracenica": "NaVi",
+    "Esport": "CS:GO",
+    "Broj_trofeja": "11",
+    "Pobjede2023": "74",
+    "Porazi2023": "56",
+    "Regija": "EU",
+    "Ukupna_zarada": "9483067.00",
+    "Igraci": [
+      {
+        "Ime": "Oleksandr",
+        "Prezime": "Kostyliev",
+        "Nickname": "s1mple",
+        "Pozicija": "AWPer",
+        "Godina_prikljucenja": "2016"
+      },
+      {
+        "Ime": "Denis",
+        "Prezime": "Sharipov",
+        "Nickname": "electroNic",
+        "Pozicija": "Rifler",
+        "Godina_prikljucenja": "2017"
+      },
+      {
+        "Ime": "Ilya",
+        "Prezime": "Zalutskiy",
+        "Nickname": "Perfecto",
+        "Pozicija": "Support",
+        "Godina_prikljucenja": "2020"
+      },
+      {
+        "Ime": "Andrii",
+        "Prezime": "Kukharskyi",
+        "Nickname": "npl",
+        "Pozicija": "Entry Fragger",
+        "Godina_prikljucenja": "2023"
+      },
+      {
+        "Ime": "Valerii",
+        "Prezime": "Vakhovskyi",
+        "Nickname": "b1t",
+        "Pozicija": "Rifler",
+        "Godina_prikljucenja": "2021"
+      }
+    ]
+  }
+]

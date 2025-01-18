@@ -5,7 +5,7 @@ const client = require("./db");
 //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 router.get('/all', async (req, res) => {
     try {
-        const result = await client.query('SELECT * FROM public.novi_igraci_razdvojeni');
+        const result = await client.query('SELECT * FROM public.novi_igraci_razdvojeni_simple');
 
         const customJSON = result.rows.reduce((acc, row) => {
             const team = acc.find(t => t.Naziv === row.naziv);
@@ -49,7 +49,7 @@ router.get('/igraci/:id', async (req, res) => {
 
     try {
         const result = await client.query(
-            'SELECT * FROM public.novi_igraci_razdvojeni WHERE igrac_id = $1',
+            'SELECT * FROM public.novi_igraci_razdvojeni_simple WHERE igrac_id = $1',
             [id]
         );
 
@@ -177,10 +177,10 @@ router.put("/igraci/:igrac_id", async (req, res) => {
         const updateQuery = `
             UPDATE igraci
             SET 
-                nickname = COALESCE($1, nickname),
-                pozicija = COALESCE($2, pozicija),
-                godina_prikljucenja = COALESCE($3, godina_prikljucenja),
-                tim_id = COALESCE($4, tim_id)
+                nickname = COALESCE($1, null,  nickname),
+                pozicija = COALESCE($2,null, pozicija),
+                godina_prikljucenja = COALESCE($3,null, godina_prikljucenja),
+                tim_id = COALESCE($4,null, tim_id)
             WHERE igrac_id = $5
         `;
 
